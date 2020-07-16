@@ -36,10 +36,6 @@
   height: 100%;
 }
 
-.typeit-script{
-  z-index: 9;
-}
-
 .home-info{
   text-align: center;
   margin: 100px;
@@ -72,4 +68,27 @@
 
 .about-page{
   text-align: center;
+}
+
+/* Projects */
+
+.projects{
+  text-align: center;
+}
+
+.ui.centered.card{
+  width: 400px !important
+}
+
+.project-box{
+  width: 100%;
+  height: 100%;            
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 100;  
+  z-index: 0;
+}
+.project-box.stack-top{
+  z-index: 9;
 }
