@@ -14,7 +14,7 @@ function App() {
     <div>
       <Nav />
       <br />
-      <Route exact path="/home" render={ () => <Home /> } />
+      <Route exact path="/" render={ () => <Home /> } />
       <Route exact path="/about" render={ () => <About /> } />
       <Route exact path="/projects" render={ () => <Projects /> } />
     </div>

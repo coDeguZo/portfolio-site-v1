@@ -14,7 +14,7 @@ render(){
   const { activeItem } = this.state
   return(
 <Menu className='menu navbar' >
-  <Link to='/home'> 
+  <Link to='/'> 
        <Menu.Item name='Home' 
        active={activeItem === 'Home'}
        onClick={this.handleItemClick}/>
