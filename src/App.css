@@ -92,3 +92,51 @@
 .project-box.stack-top{
   z-index: 9;
 }
+
+/* Resume */
+
+.resume {
+  text-align: center;
+  margin: 100px;
+  z-index: 9 !important;
+}
+
+.resume-box{
+  width: 100%;
+  height: 200%;            
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 100;  
+  z-index: 0;
+}
+
+@media only screen and (max-width: 40em){
+  .resume-box{
+    width: 100%;
+    height: 250%;            
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 100;  
+    z-index: 0;
+  }
+}
+
+.resume-box.stack-top{
+  z-index: 9;
+}
+
+/* .resume-logos{
+  height: 150%;
+} */
+
+.resume-title{
+  z-index: 9 !important;
+  font-weight: 100000;
+  font-size: 55px;
+  font-family: "Montserrat,Helvetica,sans-serif";
+  /* text-align: center; */
+}
+
+/* Resume ------- Education */

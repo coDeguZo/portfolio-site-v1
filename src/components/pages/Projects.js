@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Canvas } from 'react-canvas-js';
-import { Card, Image, Grid } from 'semantic-ui-react'
+import { Card, Image, Grid, Button } from 'semantic-ui-react'
+import TypeIt from 'typeit-react'
+
 
 const sample1 = {
     "maxParticles": 50,
@@ -18,58 +20,64 @@ const sample1 = {
     ],
     "size": 20,
     "minSpeed": 0.5,
-    "maxSpeed": 0.2,
+    "maxSpeed": 1,
     "alpha": 0.7,
     "backgroundColor": "#f1f1f1"
   };
 
 function Projects(){
+    const [color, setColor] = useState("")
+
     return(
         <div className="projects">
             <div className="project-box"><Canvas className="canvas" options={sample1} /></div>
             <div className="project-box project-stack-top">
+            <br /><br /><br /><br /><br />
+            <TypeIt>
+                <strong className="home-name">Projects</strong>
+            </TypeIt>
             <br />
-            <h1>Technical Projects</h1>
             <br />
             <Grid>
                 <Grid.Row>
                     <Card centered>
                     <Card.Header><h1>Bassy Jobs</h1></Card.Header>
-                        <Image src="https://media-exp1.licdn.com/dms/image/sync/C4D27AQFlh0DvNskcKg/articleshare-shrink_480/0?e=1594929600&v=beta&t=fDhmKJnGvmuyLThRBqdeQTB4-8x1bDlOIdME0m8lOaE" wrapped ui={false} />
+                        <Image src={process.env.PUBLIC_URL + '/BassyJobs.png'} wrapped ui={false} />
                         <Card.Content>
                         <Card.Description>
-                            Matthew is a musician living in Nashville.
+                            <h3>A job seeking app designed to help job seekers find jobs and help companies list new jobs for hire.</h3>
                         </Card.Description>
                         </Card.Content>
                         <Card.Content extra>
+                            <Button onClick={() => window.open("https://github.com/coDeguZo/Mod-4-Frontend-Bassy-Jobs")}>Frontend Repo</Button><span><Button onClick={() => window.open("https://github.com/coDeguZo/Mod-4-Backend-Bassy-Jobs")}>Backend Repo</Button></span>
                         </Card.Content>
                     </Card>
                     <Card centered>
-                        <Image src="https://media-exp1.licdn.com/dms/image/sync/C4D27AQHrW3vQjVGLng/articleshare-shrink_160/0?e=1594929600&v=beta&t=d5viFPAHBRpypgIeXz2dTVhvumBTTM0sW41560BXskk" wrapped ui={false} />
+                    <Card.Header><h1>AnimalGram</h1></Card.Header>
+                        <Image src={process.env.PUBLIC_URL + '/AnimalGram.png'} wrapped ui={false} />
+                        <Card.Content>
+                        <Card.Description>
+                            <h3>Social media platform for users to share their pets' pictures.</h3>
+                        </Card.Description>
+                        </Card.Content>
+                        <Card.Content extra>
+                            <Button onClick={() => window.open("https://github.com/coDeguZo/Mod-3-Project-Frontend")}>Frontend Repo</Button><span><Button onClick={() => window.open("https://github.com/coDeguZo/Mod-3-Backend-Animalgram")}>Backend Repo</Button></span>
+                        </Card.Content>
+                    </Card>
+                    <Card centered>
+                    <Card.Header><h1>Sports News Network</h1></Card.Header>
+                        <Image src={process.env.PUBLIC_URL + '/SPN.png'} wrapped ui={false} />
                         <Card.Content>
                         <Card.Header>Matthew</Card.Header>
                         <Card.Meta>
                             <span className='date'>Joined in 2015</span>
                         </Card.Meta>
                         <Card.Description>
-                            Matthew is a musician living in Nashville.
+                            <h3>Sports news web application for your up-to-date sports stories.</h3>
                         </Card.Description>
                         </Card.Content>
                         <Card.Content extra>
-                        </Card.Content>
-                    </Card>
-                    <Card centered>
-                        <Image src="https://media-exp1.licdn.com/dms/image/sync/C4D27AQFGjlNKRkxxmg/articleshare-shrink_160/0?e=1594929600&v=beta&t=sznVkgpOekX9ZglN3e3AON4mZvFAQ1uZQg7zhEPQBK4" wrapped ui={false} />
-                        <Card.Content>
-                        <Card.Header>Matthew</Card.Header>
-                        <Card.Meta>
-                            <span className='date'>Joined in 2015</span>
-                        </Card.Meta>
-                        <Card.Description>
-                            Matthew is a musician living in Nashville.
-                        </Card.Description>
-                        </Card.Content>
-                        <Card.Content extra>
+                            <Button onClick={() => window.open("https://github.com/coDeguZo/Mod-5-Final-Project-FrontEnd")}>Frontend Repo</Button><span><Button onClick={() => window.open("https://github.com/coDeguZo/Mod-5-Final-Project-BackEnd")}>Backend Repo</Button></span>
                         </Card.Content>
                     </Card>
                 </Grid.Row>

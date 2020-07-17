@@ -17,9 +17,9 @@ const sample1 = {
       "circle",
       "square"
     ],
-    "size": 20,
-    "minSpeed": 0.05,
-    "maxSpeed": 0.2,
+    "size": 25,
+    "minSpeed": 0.10,
+    "maxSpeed": 1,
     "alpha": 0.7,
     "backgroundColor": "#f1f1f1"
   };

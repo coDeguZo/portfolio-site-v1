@@ -29,9 +29,9 @@ render(){
       active={activeItem === 'Projects'}
       onClick={this.handleItemClick}/>
   </Link>
-  <Link to='/skills'>
-      <Menu.Item name='Skills'
-      active={activeItem === 'Skills'}
+  <Link to='/resume'>
+      <Menu.Item name='Resume'
+      active={activeItem === 'Resume'}
       onClick={this.handleItemClick}/>
   </Link>
   <Link to='/blogs'>

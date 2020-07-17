@@ -3,6 +3,8 @@ import Nav from './components/layout/Nav'
 import Home from './components/pages/Home'
 import About from './components/pages/About'
 import Projects from './components/pages/Projects'
+// import Skills from './components/pages/Resume'
+import ResumeContainer from './containers/ResumeContainer'
 import './App.css';
 import { Route } from 'react-router-dom'
 
@@ -17,6 +19,7 @@ function App() {
       <Route exact path="/" render={ () => <Home /> } />
       <Route exact path="/about" render={ () => <About /> } />
       <Route exact path="/projects" render={ () => <Projects /> } />
+      <Route exact path="/resume" render={() => <ResumeContainer />} />
     </div>
   )
 }
