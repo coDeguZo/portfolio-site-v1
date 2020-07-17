@@ -8,7 +8,6 @@ import Education from '../components/Education.js'
 import { device } from '../device';
 import TypeIt from 'typeit-react'
 import { Canvas } from 'react-canvas-js';
-import { Segment } from 'semantic-ui-react'
 
 
 
@@ -44,7 +43,7 @@ const sample1 = {
     "minSpeed": 0.10,
     "maxSpeed": 1,
     "alpha": 0.7,
-    "backgroundColor": "#f1f1f1"
+    "backgroundColor": "#f1f1f2"
   };
   
 
