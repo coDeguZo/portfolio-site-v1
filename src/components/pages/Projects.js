@@ -49,7 +49,9 @@ function Projects(){
                         </Card.Description>
                         </Card.Content>
                         <Card.Content extra>
-                            <Button onClick={() => window.open("https://github.com/coDeguZo/Mod-4-Frontend-Bassy-Jobs")}>Frontend Repo</Button><span><Button onClick={() => window.open("https://github.com/coDeguZo/Mod-4-Backend-Bassy-Jobs")}>Backend Repo</Button></span>
+                            <Button onClick={() => window.open("https://github.com/coDeguZo/Mod-4-Frontend-Bassy-Jobs")}>Frontend Repo</Button>
+                            <span><Button onClick={() => window.open("https://github.com/coDeguZo/Mod-4-Backend-Bassy-Jobs")}>Backend Repo</Button></span>
+                            <span><Button onClick={() => window.open("https://www.youtube.com/watch?v=_l3k-UnIODc&t")}>Video Demo</Button></span>
                         </Card.Content>
                     </Card>
                     <Card centered>
@@ -61,23 +63,23 @@ function Projects(){
                         </Card.Description>
                         </Card.Content>
                         <Card.Content extra>
-                            <Button onClick={() => window.open("https://github.com/coDeguZo/Mod-3-Project-Frontend")}>Frontend Repo</Button><span><Button onClick={() => window.open("https://github.com/coDeguZo/Mod-3-Backend-Animalgram")}>Backend Repo</Button></span>
+                            <Button onClick={() => window.open("https://github.com/coDeguZo/Mod-3-Project-Frontend")}>Frontend Repo</Button>
+                            <span><Button onClick={() => window.open("https://github.com/coDeguZo/Mod-3-Backend-Animalgram")}>Backend Repo</Button></span>
+                            <span><Button onClick={() => window.open("https://www.youtube.com/watch?v=ZXldrgXDNXI&t")}>Video Demo</Button></span>
                         </Card.Content>
                     </Card>
                     <Card centered>
                     <Card.Header><h1>Sports News Network</h1></Card.Header>
                         <Image src={process.env.PUBLIC_URL + '/SPN.png'} wrapped ui={false} />
                         <Card.Content>
-                        <Card.Header>Matthew</Card.Header>
-                        <Card.Meta>
-                            <span className='date'>Joined in 2015</span>
-                        </Card.Meta>
                         <Card.Description>
                             <h3>Sports news web application for your up-to-date sports stories.</h3>
                         </Card.Description>
                         </Card.Content>
                         <Card.Content extra>
-                            <Button onClick={() => window.open("https://github.com/coDeguZo/Mod-5-Final-Project-FrontEnd")}>Frontend Repo</Button><span><Button onClick={() => window.open("https://github.com/coDeguZo/Mod-5-Final-Project-BackEnd")}>Backend Repo</Button></span>
+                            <Button onClick={() => window.open("https://github.com/coDeguZo/Mod-5-Final-Project-FrontEnd")}>Frontend Repo</Button>
+                            <span><Button onClick={() => window.open("https://github.com/coDeguZo/Mod-5-Final-Project-BackEnd")}>Backend Repo</Button></span>
+                            <span><Button onClick={() => window.open("https://www.youtube.com/watch?v=utf_OsfIUdo&t")}>Video Demo</Button></span>
                         </Card.Content>
                     </Card>
                 </Grid.Row>

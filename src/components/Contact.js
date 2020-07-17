@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import FormMessages from '../data/formMessages.js'
 import TypeIt from 'typeit-react'
 import swal from 'sweetalert';
-import { Image, Grid } from 'semantic-ui-react'
+import { Image, Grid, Segment } from 'semantic-ui-react'
 
 
 const ContactMe = styled.form`
@@ -54,6 +54,51 @@ const ContactMe = styled.form`
     }
   }
 `
+const Images = styled.div`
+	
+	@keyframes shake {
+	  10%, 90% {
+	    transform: translate3d(-2px, 0, 0);
+	  }
+	  
+	  20%, 80% {
+	    transform: translate3d(2px, 0, 0);
+	  }
+	  30%, 50%, 70% {
+	    transform: translate3d(-2px, 0, 0);
+	  }
+	  40%, 60% {
+	    transform: translate3d(2px, 0, 0);
+	  }
+	}
+	display: flex; 
+	flex-basis: calc(25% - 40px);
+	// flex-basis: calc(20%);
+	justify-content: center;
+	margin: 1rem;
+	flex-direction: column;
+	img {
+	  // max-height: 8rem;
+	  // max-width: 8rem;
+	  max-height: 4.5rem;
+	  max-width: 4.5rem;
+	  // min-height: 4.5rem;
+	  // min-width: 4.5rem;
+	  margin: auto;
+		
+		&:hover {
+		  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+		  transform: translate3d(0, 0, 0);
+		  backface-visibility: hidden;
+		  perspective: 1000px;
+		}
+	}
+	p {
+		font-size: .8rem;
+		font-weight: bold;
+	}
+`
+
 
 export default class MyForm extends React.Component {
   constructor(props) {
@@ -89,26 +134,28 @@ export default class MyForm extends React.Component {
                 <label>Message:</label>
                 <textarea required rows="5" name="message" id="message" placeholder={ formPrefill.message }></textarea>
                 <input type="text" name="_gotcha" style={{display:"none"}} />
-                <input type="hidden" name="_subject" value="Message from kylepcole.com!" />
+                <input type="hidden" name="_subject" value="Message from u.ariguzo.ua.com!" />
                 { /* @TODO - add CORS protection https://help.formspree.io/hc/en-us/articles/360038664534-Restrict-to-Domain */}
                 {status === "SUCCESS" ? <p>Thanks!</p> : <button>Send</button>}
                 {status === "ERROR" && <p>Ooops! There was an error.</p>}
                 </fieldset>
             </ContactMe>
             <br /><br /><br /><br /><br />
-            <div>
-                <Grid centered>
-                    <Grid.Column centered>
-                        <Image className="contact-image" src={process.env.PUBLIC_URL + '/linkedin.png'} size="tiny" />
+            <Segment>
+            <Images>
+                <Grid centered stretched>
+                    <Grid.Column centered stretched>
+                        <Image onClick={() => window.open("https://www.linkedin.com/in/uzoma-ariguzo/")} className="contact-image" src={process.env.PUBLIC_URL + '/linkedin.png'} />
                     </Grid.Column>
-                    <Grid.Column>
-                        <Image className="contact-image" src={process.env.PUBLIC_URL + '/github.png'} size="huge" />
+                    <Grid.Column stretched >
+                        <Image onClick={() => window.open("https://github.com/coDeguZo")} className="contact-image" src={process.env.PUBLIC_URL + '/github2.png'} />
                     </Grid.Column>
-                    <Grid.Column>
-                        <Image className="contact-image" src={process.env.PUBLIC_URL + '/medium.svg'} size="huge" />
+                    <Grid.Column stretched >
+                        <Image onClick={() => window.open("https://medium.com/@u.ariguzo.ua")} className="contact-image" src={process.env.PUBLIC_URL + '/medium.svg'} />
                     </Grid.Column>
                 </Grid>
-            </div>
+            </Images>
+            </Segment>
         </div>
     );
   }

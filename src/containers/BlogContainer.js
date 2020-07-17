@@ -9,7 +9,7 @@ const BlogList = styled.div`
 	width: 75%;
 	min-height: 100%;
 	margin: auto;
-  	display: flex;
+	display: flex;
   	flex-wrap: wrap;
   	flex-direction: row;
   	justify-content: center;

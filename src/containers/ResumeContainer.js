@@ -39,7 +39,7 @@ const sample1 = {
       "circle",
 	  "square"
     ],
-    "size": 10,
+    "size": 5,
     "minSpeed": 0.10,
     "maxSpeed": 1,
     "alpha": 0.7,
@@ -56,7 +56,7 @@ function Resume(props)  {
 		<div className="resume">
             <br />
             <br />
-            <div className="resume-box"><Canvas className="resume-logos" options={sample1} /></div>
+            {/* <div className="resume-box"><Canvas className="resume-logos" options={sample1} /></div> */}
             <div className="resume-box resume-stack-top">
 			<br />
 			<ResumeContainer>
