@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Sidebar, Responsive, Icon, Image, Segment, Header, Button, MenuHeader } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 
 
 class Nav extends Component{
   state = {
-      activeItem: null
+      activeItem: null,
+      sideBarVisible: false
   }
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -17,40 +18,114 @@ class Nav extends Component{
 
 
 render(){
-  const { activeItem } = this.state
+  const { activeItem, sideBarVisible } = this.state
   return(
-<Menu className='menu navbar' >
-  <Link to='/'> 
-       <Menu.Item name='Home' 
-       active={activeItem === 'Home'}
-       onClick={this.handleItemClick}/>
-  </Link> 
-  <Link to='/'>
-      <Menu.Item name='About'
-      active={activeItem === 'About'}
-      onClick={this.handleAboutClick}/>
-  </Link>
-  <Link to='/projects'>
-      <Menu.Item name='Projects'
-      active={activeItem === 'Projects'}
-      onClick={this.handleItemClick}/>
-  </Link>
-  <Link to='/resume'>
-      <Menu.Item name='Resume'
-      active={activeItem === 'Resume'}
-      onClick={this.handleItemClick}/>
-  </Link>
-  <Link to='/blogs'>
-      <Menu.Item name='Blogs'
-      active={activeItem === 'Blog'}
-      onClick={this.handleItemClick}/>
-  </Link>
-  <Link to='/contact'>
-      <Menu.Item name='Contact'
-      active={activeItem === 'Contact'}
-      onClick={this.handleItemClick}/>
-  </Link>
-</Menu>
+    <div>
+    <Responsive {...Responsive.onlyComputer}>
+      <Menu className='menu navbar' >
+        <Link to='/'> 
+            <Menu.Item name='Home' 
+            active={activeItem === 'Home'}
+            onClick={this.handleItemClick}/>
+        </Link> 
+        <Link to='/'>
+            <Menu.Item name='About'
+            active={activeItem === 'About'}
+            onClick={this.handleAboutClick}/>
+        </Link>
+        <Link to='/projects'>
+            <Menu.Item name='Projects'
+            active={activeItem === 'Projects'}
+            onClick={this.handleItemClick}/>
+        </Link>
+        <Link to='/resume'>
+            <Menu.Item name='Resume'
+            active={activeItem === 'Resume'}
+            onClick={this.handleItemClick}/>
+        </Link>
+        <Link to='/blogs'>
+            <Menu.Item name='Blogs'
+            active={activeItem === 'Blog'}
+            onClick={this.handleItemClick}/>
+        </Link>
+        <Link to='/contact'>
+            <Menu.Item name='Contact'
+            active={activeItem === 'Contact'}
+            onClick={this.handleItemClick}/>
+        </Link>
+      </Menu>
+    </Responsive>
+                              {/* Tablet */}
+    {/* --------------------------------------------------------- */}
+    <Responsive {...Responsive.onlyTablet}>
+      <Menu className='menu navbar' >
+        <Link to='/'> 
+            <Menu.Item name='Home' 
+            active={activeItem === 'Home'}
+            onClick={this.handleItemClick}/>
+        </Link> 
+        <Link to='/'>
+            <Menu.Item name='About'
+            active={activeItem === 'About'}
+            onClick={this.handleAboutClick}/>
+        </Link>
+        <Link to='/projects'>
+            <Menu.Item name='Projects'
+            active={activeItem === 'Projects'}
+            onClick={this.handleItemClick}/>
+        </Link>
+        <Link to='/resume'>
+            <Menu.Item name='Resume'
+            active={activeItem === 'Resume'}
+            onClick={this.handleItemClick}/>
+        </Link>
+        <Link to='/blogs'>
+            <Menu.Item name='Blogs'
+            active={activeItem === 'Blog'}
+            onClick={this.handleItemClick}/>
+        </Link>
+        <Link to='/contact'>
+            <Menu.Item name='Contact'
+            active={activeItem === 'Contact'}
+            onClick={this.handleItemClick}/>
+        </Link>
+      </Menu>
+    </Responsive>
+                      {/* Mobile Menu  */}
+    {/* --------------------------------------------------- */}
+    <Responsive {...Responsive.onlyMobile}>
+      <Menu>
+        <Menu.Item><Image src={process.env.PUBLIC_URL + '/chibuguzo.jpg'} size="mini"/></Menu.Item>
+        {/* <Menu.Item className="segment-width"> */}
+      {/* <Sidebar.Pushable as={Segment.Group} raised> */}
+          <Sidebar
+            fluid
+            as={Menu}
+            animation='overlay'
+            icon='labeled'
+            direction="right"
+            onHide={() => this.setState({sideBarVisible: false})}
+            vertical
+            visible={sideBarVisible}
+            width='thin'
+          >
+            <Menu.Item><Link to='/'>Home</Link></Menu.Item>
+            <Menu.Item as='a'><Link to='/'>About</Link></Menu.Item>
+            <Menu.Item><Link to='/projects'>Projects</Link></Menu.Item>
+            <Menu.Item><Link to='/resume'>Resume</Link></Menu.Item>
+            <Menu.Item><Link to='/blogs'>Blogs</Link></Menu.Item>
+            <Menu.Item><Link to='/contact'>Contact</Link></Menu.Item>
+          </Sidebar>
+        {/* </Sidebar.Pushable> */}
+        {/* </Menu.Item> */}
+        <Menu.Item position="right">
+        <Button position="right" onClick={() => this.setState({sideBarVisible: true})}>
+              <Icon name="bars"/>
+        </Button>
+        </Menu.Item>
+      </Menu>
+    </Responsive>
+    </div>
 )}
 }
 

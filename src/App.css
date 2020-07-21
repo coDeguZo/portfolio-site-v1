@@ -20,6 +20,26 @@
     }
 }
 
+.segment-width{
+  width: 100px;
+}
+
+.ui.fluid.labeled.icon.ui.overlay.left.thin.visible.sidebar.menu{
+  width:100px !important
+}
+
+.ui.fluid.labeled.icon.ui.overlay.left.thin.animating.sidebar.menu{
+  width:100px !important
+}
+
+.ui.fluid.labeled.icon.ui.overlay.right.thin.visible.sidebar.menu{
+  width:100px !important
+}
+
+.ui.fluid.labeled.icon.ui.overlay.right.thin.animating.sidebar.menu{
+  width:100px !important
+}
+
 /* Home Page */
 .box{
   width: 100%;
