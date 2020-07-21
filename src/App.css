@@ -33,11 +33,15 @@
 }
 
 .ui.fluid.labeled.icon.ui.overlay.right.thin.visible.sidebar.menu{
-  width:100px !important
+  width:100px !important;
 }
 
 .ui.fluid.labeled.icon.ui.overlay.right.thin.animating.sidebar.menu{
   width:100px !important
+}
+
+.burger-button{
+  width: 50px;
 }
 
 /* Home Page */

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import FormMessages from '../data/formMessages.js'
 import TypeIt from 'typeit-react'
 import swal from 'sweetalert';
-import { Image, Grid, Segment } from 'semantic-ui-react'
+import { Image, Grid, Responsive } from 'semantic-ui-react'
 
 
 const ContactMe = styled.form`
@@ -140,11 +140,12 @@ export default class MyForm extends React.Component {
                 {status === "ERROR" && <p>Ooops! There was an error.</p>}
                 </fieldset>
             </ContactMe>
-            <br /><br /><br /><br /><br />
-            <Segment>
+            <br /><br />
+            <h3 style={{textAlign:"center"}}>Follow Me:</h3>
             <Images>
+              <Responsive {...Responsive.onlyComputer}>
                 <Grid centered stretched>
-                    <Grid.Column centered stretched>
+                    <Grid.Column stretched>
                         <Image onClick={() => window.open("https://www.linkedin.com/in/uzoma-ariguzo/")} className="contact-image" src={process.env.PUBLIC_URL + '/linkedin.png'} />
                     </Grid.Column>
                     <Grid.Column stretched >
@@ -154,8 +155,34 @@ export default class MyForm extends React.Component {
                         <Image onClick={() => window.open("https://medium.com/@u.ariguzo.ua")} className="contact-image" src={process.env.PUBLIC_URL + '/medium.svg'} />
                     </Grid.Column>
                 </Grid>
+                </Responsive>
+                <Responsive {...Responsive.onlyTablet} {...Responsive.onlyMobile}>
+                <Grid centered stretched>
+                    <Grid.Column mobile={10}>
+                        <Image onClick={() => window.open("https://www.linkedin.com/in/uzoma-ariguzo/")} className="contact-image" src={process.env.PUBLIC_URL + '/linkedin.png'} />
+                    </Grid.Column>
+                    <Grid.Column mobile={10} >
+                        <Image onClick={() => window.open("https://github.com/coDeguZo")} className="contact-image" src={process.env.PUBLIC_URL + '/github2.png'} />
+                    </Grid.Column>
+                    <Grid.Column mobile={10} >
+                        <Image onClick={() => window.open("https://medium.com/@u.ariguzo.ua")} className="contact-image" src={process.env.PUBLIC_URL + '/medium.svg'} />
+                    </Grid.Column>
+                </Grid>
+                </Responsive>
+                {/* <Responsive {...Responsive.onlyMobile}>
+                <Grid centered stretched>
+                    <Grid.Column mobile={10}>
+                        <Image onClick={() => window.open("https://www.linkedin.com/in/uzoma-ariguzo/")} className="contact-image" src={process.env.PUBLIC_URL + '/linkedin.png'} />
+                    </Grid.Column>
+                    <Grid.Column mobile={10} >
+                        <Image onClick={() => window.open("https://github.com/coDeguZo")} className="contact-image" src={process.env.PUBLIC_URL + '/github2.png'} />
+                    </Grid.Column>
+                    <Grid.Column mobile={10}>
+                        <Image onClick={() => window.open("https://medium.com/@u.ariguzo.ua")} className="contact-image" src={process.env.PUBLIC_URL + '/medium.svg'} />
+                    </Grid.Column>
+                </Grid>
+                </Responsive> */}
             </Images>
-            </Segment>
         </div>
     );
   }

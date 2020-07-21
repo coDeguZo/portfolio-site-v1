@@ -96,10 +96,9 @@ render(){
     <Responsive {...Responsive.onlyMobile}>
       <Menu>
         <Menu.Item><Image src={process.env.PUBLIC_URL + '/chibuguzo.jpg'} size="mini"/></Menu.Item>
-        {/* <Menu.Item className="segment-width"> */}
-      {/* <Sidebar.Pushable as={Segment.Group} raised> */}
           <Sidebar
             fluid
+            inverted
             as={Menu}
             animation='overlay'
             icon='labeled'
@@ -109,18 +108,16 @@ render(){
             visible={sideBarVisible}
             width='thin'
           >
-            <Menu.Item><Link to='/'>Home</Link></Menu.Item>
-            <Menu.Item as='a'><Link to='/'>About</Link></Menu.Item>
-            <Menu.Item><Link to='/projects'>Projects</Link></Menu.Item>
-            <Menu.Item><Link to='/resume'>Resume</Link></Menu.Item>
-            <Menu.Item><Link to='/blogs'>Blogs</Link></Menu.Item>
-            <Menu.Item><Link to='/contact'>Contact</Link></Menu.Item>
+            <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/'>Home</Link></Menu.Item>
+            <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/'>About</Link></Menu.Item>
+            <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/projects'>Projects</Link></Menu.Item>
+            <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/resume'>Resume</Link></Menu.Item>
+            <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/blogs'>Blogs</Link></Menu.Item>
+            <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/contact'>Contact</Link></Menu.Item>
           </Sidebar>
-        {/* </Sidebar.Pushable> */}
-        {/* </Menu.Item> */}
         <Menu.Item position="right">
-        <Button position="right" onClick={() => this.setState({sideBarVisible: true})}>
-              <Icon name="bars"/>
+        <Button className="burger-button" onClick={() => this.setState({sideBarVisible: true})}>
+              <Icon color="black" name="bars" />
         </Button>
         </Menu.Item>
       </Menu>
