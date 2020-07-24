@@ -66,8 +66,8 @@ function Resume(props)  {
 						<strong className="home-name">Resume</strong>
 					</TypeIt>
 				<br />
-				<a href={"src/utilities/SE Resume II.pdf"} download><Button>Download Resume</Button></a>
-				<br />
+				{/* <a href={"src/utilities/SE Resume II.pdf"} download><Button>Download Resume</Button></a> */}
+				{/* <br /> */}
 				<h1 style={{textAlign: "center"}} >Experience</h1>
 				{ resume.experience.map(job => <Experience job={ job } key={ job.company }/> ) }
 				<h1 style={{textAlign: "center"}}>Training</h1>
