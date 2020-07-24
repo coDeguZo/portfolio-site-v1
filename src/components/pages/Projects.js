@@ -27,10 +27,10 @@ const sample1 = {
 
 function Projects(){
     const [color, setColor] = useState("")
-
+    // Canvas className="canvas" options={sample1} />
     return(
         <div className="projects">
-            <div className="project-box"><Canvas className="canvas" options={sample1} /></div>
+            <div className="project-box"></div>
             <div className="project-box project-stack-top">
             <br /><br /><br /><br /><br />
             <TypeIt>
