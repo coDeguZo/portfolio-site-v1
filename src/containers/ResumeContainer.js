@@ -7,7 +7,8 @@ import Experience from '../components/Experience.js'
 import Education from '../components/Education.js'
 import { device } from '../device';
 import TypeIt from 'typeit-react'
-import { Canvas } from 'react-canvas-js';
+import { Button } from 'semantic-ui-react'
+// import { Canvas } from 'react-canvas-js';
 
 
 
@@ -64,6 +65,8 @@ function Resume(props)  {
 					<TypeIt>
 						<strong className="home-name">Resume</strong>
 					</TypeIt>
+				<br />
+				<a href={"src/utilities/SE Resume II.pdf"} download><Button>Download Resume</Button></a>
 				<br />
 				<h1 style={{textAlign: "center"}} >Experience</h1>
 				{ resume.experience.map(job => <Experience job={ job } key={ job.company }/> ) }
