@@ -3,6 +3,7 @@ import RESUME from '../data/resume.js'
 import styled from 'styled-components'
 import Skills from './Skills.js'
 // import FunFact from '../components/Anecdote.js'
+import resumeDownload from '../utilities/SEResumeII.pdf'
 import Experience from '../components/Experience.js'
 import Education from '../components/Education.js'
 import { device } from '../device';
@@ -66,7 +67,7 @@ function Resume(props)  {
 						<strong className="home-name">Resume</strong>
 					</TypeIt>
 				<br />
-				{/* <a href={"src/utilities/SE Resume II.pdf"} download><Button>Download Resume</Button></a> */}
+				<a href={resumeDownload} download><Button>Download Resume</Button></a>
 				{/* <br /> */}
 				<h1 style={{textAlign: "center"}} >Experience</h1>
 				{ resume.experience.map(job => <Experience job={ job } key={ job.company }/> ) }

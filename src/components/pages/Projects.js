@@ -124,7 +124,7 @@ function Projects(){
                                     icon: "info",
                                     text: "Video Coming Soon !"
                                 })}>Video Demo</Button></span>
-                            <span><Button onClick={() => window.open("https://covid19hltracker.netlify.app/")}>Website</Button></span>
+                            {/* <span><Button onClick={() => window.open("https://covid19hltracker.netlify.app/")}>Website</Button></span> */}
                         </Card.Content>
                     </Card>
                 </Grid.Row>
