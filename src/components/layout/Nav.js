@@ -28,10 +28,10 @@ render(){
             active={activeItem === 'Home'}
             onClick={this.handleItemClick}/>
         </Link> 
-        <Link to='/'>
+        <Link to='/about'>
             <Menu.Item name='About'
             active={activeItem === 'About'}
-            onClick={this.handleAboutClick}/>
+            onClick={this.handleItemClick}/>
         </Link>
         <Link to='/projects'>
             <Menu.Item name='Projects'
@@ -64,7 +64,7 @@ render(){
             active={activeItem === 'Home'}
             onClick={this.handleItemClick}/>
         </Link> 
-        <Link to='/'>
+        <Link to='/about'>
             <Menu.Item name='About'
             active={activeItem === 'About'}
             onClick={this.handleAboutClick}/>
@@ -109,7 +109,7 @@ render(){
             width='thin'
           >
             <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/'>Home</Link></Menu.Item>
-            <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/'>About</Link></Menu.Item>
+            <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/about'>About</Link></Menu.Item>
             <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/projects'>Projects</Link></Menu.Item>
             <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/resume'>Resume</Link></Menu.Item>
             <Menu.Item onClick={() => this.setState({sideBarVisible: false})}><Link style={{color: "black"}} to='/blogs'>Blogs</Link></Menu.Item>
