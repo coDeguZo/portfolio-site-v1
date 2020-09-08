@@ -14,9 +14,9 @@ function About(){
             <Image centered circular size="medium" src="https://avatars3.githubusercontent.com/u/33858127?s=460&u=86b0afa70fbb45a4d176637abe08d13ef20c610a&v=4"/>
             <Segment>
                 <h3>
-                I am a full-stack engineer developing innovative solutions to solve complex problems. My programming journey started in Australia where I learned how to code using the markup languages HTML and CSS. 
-                Not to long after, I started myself Python and have since spent time at Flatiron School Web Dev bootcamp continuing to progress my programming knowledge. 
-                Before that I worked for the Lutheran Campus Ministry at the University of Maryland and worked on a clothing startup called MARE. When I'm not writing code I can be found ouside enjoying nature or playing piano.
+                I am a Full-Stack Software Engineer developing innovative solutions to solve complex problems. My programming journey started in Australia where I learned how to code using the Markup Languages HTML and CSS. 
+                Not long after, I started teaching myself Python and have since attended Flatiron School Web Dev Bootcamp, which has progressed my programming knowledge. 
+                Before that I worked for the Lutheran Campus Ministry at the University of Maryland and worked with a clothing startup company called MARE. When I'm not writing code I enjoy playing the Piano and playing Basketball!
                 </h3>
             </Segment>
             <h3>Check Out Past Web Projects For Prior Jobs:</h3>
