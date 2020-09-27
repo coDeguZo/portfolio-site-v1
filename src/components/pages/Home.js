@@ -32,7 +32,7 @@ function Home() {
             <div className="box stack-top">
                 <div className="home-info">
                     <div>
-                    <Image centered className="home-image" src="https://media-exp1.licdn.com/dms/image/C4D03AQHhArp3r7AGOA/profile-displayphoto-shrink_200_200/0?e=1600905600&v=beta&t=Im3NS_Ddb8BC74I9QIeOA2WY39-cHni0TPTm7UNLjuo" size="medium" circular/>
+                    <Image centered className="home-image" src={process.env.PUBLIC_URL + '/UzomaHeadShot3.jpeg'} size="medium" circular/>
                     <br /><br /><br />
                     <TypeIt>
                         <strong className="home-name">Hi, I'm Uzoma Ariguzo</strong>
